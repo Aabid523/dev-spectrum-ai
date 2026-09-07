@@ -15,7 +15,7 @@ function useTyping() {
   const [del, setDel] = useState(false);
 
   useEffect(() => {
-    const word = rotating[i % rotating.length];
+    const word = rotating[i % rotating.length] ?? "";
     const done = !del && text === word;
     const empty = del && text === "";
     if (done) {
